@@ -1,24 +1,21 @@
-## FNF Delivery
-
 # Delivery Management Software
 
-Inspired from https://eng.uber.com/tech-stack-part-one-foundation/ , https://eng.uber.com/service-oriented-architecture/
+Inspired from <https://eng.uber.com/tech-stack-part-one-foundation/> , <https://eng.uber.com/service-oriented-architecture/>
 
-Requirements
+## Requirements
 
-Automated Dispatch & Delivery
+1. Automated Dispatch & Delivery
 
-Have your pickups & deliveries auto assigned to your nearest & free delivery agents as soon as the order is prepared. 
+2. Have your pickups & deliveries auto assigned to your nearest & free delivery agents as soon as the order is prepared. 
 
-Tracking & Route Optimization
+3. Tracking & Route Optimization
 
-Get delivery tracking system to monitor workforce in real-time. Plan ahead with optimized routes for managing delivery services. 
-
+4. Get delivery tracking system to monitor workforce in real-time. Plan ahead with optimized routes for managing delivery services.
 
 
 DISCO -> Dispatch Optimization
 
-Input -> Location Data from Map (Lat, Long) 
+Input -> Location Data from Map (Lat, Long)
 
 Solution - Google S2 Library -> Divides earth's data into 1 km x 1 km chunks which are uniquely identifiable.
 Uses :- Can access data quickly based on s2 index. and also able to distribute data using s2 as partition key via consistent hashing.
@@ -66,10 +63,7 @@ Payment System
 
 DataCenter Failure -> Backup DC
 
-
-## Tech Stack
-
-###Frontend 
+### Frontend 
 Website 
 -> Desktop Application
 -> Mobile Website
@@ -87,13 +81,13 @@ Cross Platform App Development
 
 React Native vs Flutter
 
-http://thrift.apache.org/ 
-https://eng.uber.com/uber-tech-stack-part-two/ 
+<http://thrift.apache.org/>
+<https://eng.uber.com/uber-tech-stack-part-two/>
 
-S2 Library -> https://s2geometry.io/about/overview, https://s2geometry.io/devguide/cpp/quickstart https://medium.com/@self.maurya/lesser-known-things-about-googles-s2-fea42f852f67 
-https://github.com/google/s2geometry
+S2 Library -> <https://s2geometry.io/about/overview,> <https://s2geometry.io/devguide/cpp/quickstart> <https://medium.com/@self.maurya/lesser-known-things-about-googles-s2-fea42f852f67> 
+<https://github.com/google/s2geometry>
 
-Queueing -> AWS Kinesis, (Apache Kafka https://medium.com/@shastri.shankar9/apache-kafka-vs-amazon-kinesis-b55821c7f51f )
+Queueing -> AWS Kinesis, (Apache Kafka <https://medium.com/@shastri.shankar9/apache-kafka-vs-amazon-kinesis-b55821c7f51f> )
 
 
 ##Entities
@@ -111,3 +105,34 @@ Queueing -> AWS Kinesis, (Apache Kafka https://medium.com/@shastri.shankar9/apac
 -> Services
 
 1. Supplier Service -> Supplier Onboarding, Inventory Management System, Supplier UI (Analytics/ Dashboard)
+
+Payment System
+1. Payment Integration - Paytm, AmazonPay, UPI , Credit Card / Debit Card , Cash ?
+
+
+Onboarding a Supplier
+
+Contract Physical (Meet & Greet Photos Taken )
+1. Shop Identifier (Unique)
+2. Shop Name
+3. Address -> (incl Lat, Long)
+4. Shop Category - (Food, Grocery, Vegetables, Elctronics, Stationary)
+5. Timings - (Allow Shopkeeper to change it dynamically)
+6. **Products** -- Alow Supplier to update it as and when required.
+7. **Ratings&Reviews**
+
+Products
+
+1. Product Name
+2. Category
+3. Product Description
+4. Weight
+5. Picture URL
+6. Price
+
+Ratings&Reviews
+1. Leave For Now
+
+Onboarding a Rider
+Initial Physical Contact (Jersey Promotion Stuff)
+1. Rider Identifier
